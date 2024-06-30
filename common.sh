@@ -17,3 +17,7 @@ notify() {
     osascript -e "display notification \"$content\" with title \"$title\" subtitle \"$subtitle\""
 }
 
+# Refreshes/Reloads the current terminal session.
+refresh() {
+    source ~/.zshrc
+}

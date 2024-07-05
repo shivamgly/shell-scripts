@@ -37,11 +37,11 @@ installStarship() {
     curl -sS https://starship.rs/install.sh | sh;
 
     echo "Configuring starship for nerd fonts..."
-    configFileLocation="$HOME/.config/starshipx.toml"
+    configFileLocation="$HOME/.config/starship.toml"
     nerdfontPreset=$(starship preset nerd-font-symbols)
 
     echo "add_newline = false" >> $configFileLocation
-    echo -e 'format = "$directory$time$all$character"\n' >> $configFileLocation
+    echo -e 'right_format = """$time"""\n' >> $configFileLocation
     echo "[time]" >> $configFileLocation
     echo "disabled = false" >> $configFileLocation
     echo -e "use_12hr = true\n" >> $configFileLocation

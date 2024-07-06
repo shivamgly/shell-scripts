@@ -40,6 +40,8 @@ installStarship() {
     configFileLocation="$HOME/.config/starship.toml"
     nerdfontPreset=$(starship preset nerd-font-symbols)
 
+    mkdir -p "$HOME/.config"
+    touch $configFileLocation
     echo "add_newline = false" >> $configFileLocation
     echo -e 'right_format = """$time"""\n' >> $configFileLocation
     echo "[time]" >> $configFileLocation

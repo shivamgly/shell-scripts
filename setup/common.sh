@@ -2,10 +2,11 @@
 
 installOhMyZsh() {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
+}
 
+enableOhMyZshPlugins() {
     echo "Enabling ZSH plugins..."
     enableOhMyZshPlugin "git"
-    enableOhMyZshPlugin "bundler"
     enableOhMyZshPlugin "dotenv"
     enableOhMyZshPlugin "aws"
     enableOhMyZshPlugin "rust"
